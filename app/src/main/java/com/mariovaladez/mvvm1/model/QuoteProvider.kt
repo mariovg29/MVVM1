@@ -1,13 +1,14 @@
 package com.mariovaladez.mvvm1.model
 
 class QuoteProvider {
+    companion object{
 
     fun random():QuoteModel{
         val position = (0..7).random()
         return quote[position]
     }
 
-    companion object{
+
        private  val quote = listOf<QuoteModel>(
             QuoteModel(
                 "1 It's not a Bug.Its an undocumented feature!",
