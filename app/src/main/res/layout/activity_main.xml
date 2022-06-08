@@ -7,13 +7,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/back"
-    tools:context=".view.MainActivity">
+    tools:context=".ui.view.MainActivity">
 
     <TextView
         android:id="@+id/tvCita"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Toca la pantalla"
+        tools:text="Toca la pantalla"
         android:textColor="@color/white"
         android:textSize="25dp"
         android:padding="10dp"
@@ -26,7 +26,7 @@
         android:id="@+id/tvAutor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Autor"
+        tools:text="Autor"
         android:textColor="@color/white"
         android:textSize="25dp"
         android:padding="10dp"
@@ -34,5 +34,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
          />
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
