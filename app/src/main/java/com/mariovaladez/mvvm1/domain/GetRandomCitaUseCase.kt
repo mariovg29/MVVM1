@@ -3,13 +3,14 @@ package com.mariovaladez.mvvm1.domain
 import com.mariovaladez.mvvm1.data.CitasRepository
 import com.mariovaladez.mvvm1.data.model.CitasModel
 import com.mariovaladez.mvvm1.data.model.CitasPrivider
+import javax.inject.Inject
 
-class GetRandomCitaUseCase {
+class GetRandomCitaUseCase @Inject constructor(private val citasPrivider:CitasPrivider) {
 
-    private val repository = CitasRepository()
+    //private val repository = CitasRepository()
 
     operator fun invoke():CitasModel?{
-        val citas = CitasPrivider.citas
+        val citas = citasPrivider.citas
         if(!citas.isNullOrEmpty()){
 
             val randomNumber = (citas.indices).random()

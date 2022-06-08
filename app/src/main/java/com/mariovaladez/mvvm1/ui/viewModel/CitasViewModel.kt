@@ -7,12 +7,18 @@ import com.mariovaladez.mvvm1.data.model.CitasModel
 import com.mariovaladez.mvvm1.data.model.CitasPrivider
 import com.mariovaladez.mvvm1.domain.GetCitasUseCase
 import com.mariovaladez.mvvm1.domain.GetRandomCitaUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class CitasViewModel : ViewModel(){
+@HiltViewModel
+class CitasViewModel @Inject constructor(
+    private val getCitasUseCase:GetCitasUseCase,
+    private val getRandomCitaUseCase:GetRandomCitaUseCase
+
+) : ViewModel(){
     val citasModel= MutableLiveData<CitasModel>()
-    var getCitasUseCase = GetCitasUseCase()
-    var getRandomCitaUseCase = GetRandomCitaUseCase()
+
     val isLoading = MutableLiveData<Boolean>()
 
     fun onCreate() {

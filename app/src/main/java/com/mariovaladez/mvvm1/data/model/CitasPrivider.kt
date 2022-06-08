@@ -1,9 +1,14 @@
 package com.mariovaladez.mvvm1.data.model
 
-class CitasPrivider {
-    companion object {
+import javax.inject.Inject
+import javax.inject.Singleton
+
+
+@Singleton
+class CitasPrivider @Inject constructor(){
+
         var citas:List<CitasModel> = emptyList()
 
 
-    }
+
 }
