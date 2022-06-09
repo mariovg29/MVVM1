@@ -63,13 +63,19 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit:2.9.0"
     implementation "com.squareup.retrofit2:converter-gson:2.9.0"
     //Corrutinas
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0'
+
     //dagger hilt
     implementation "com.google.dagger:hilt-android:2.35"
     kapt "com.google.dagger:hilt-android-compiler:2.35"
     //Room
     implementation "androidx.room:room-ktx:2.4.0"
     kapt "androidx.room:room-compiler:2.4.0"
+
+    //Test Unitarios
+    testImplementation "io.mockk:mockk:1.12.2"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.0"
+    testImplementation "androidx.arch.core:core-testing:2.1.0"
 
 
 
